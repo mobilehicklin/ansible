@@ -1,0 +1,32 @@
+---
+- name: test script module
+  hosts: windows
+  tasks:
+
+    - name: Copy all files required for server testing
+      win_copy:
+       src: /etc/ansible/Xfer_Files/
+       dest: c:\Suport\
+    - name: execute powershell script to collects server infomation
+      script: files/x.ps1
+    - name: Remove windows Registry input file for testing
+      win_file:
+       path: C:\Suport\test.csv
+       state: absent
+    - name: Remove Powershell Registry Function script
+      win_file:
+       path: C:\Suport\DLG_TESTING_MS.ps1
+       state: absent
+    - name: Copy the test results
+      win_copy:
+       src: c:\Suport\result.txt
+       dest: c:\testing\result.txt
+       remote_src: True
+    - name: remove test results from suport location
+      win_file:
+       path: c:\suport\result.txt
+       state: absent
+    - name: Testing registry keys demo
+      win_reg_stat:
+       path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion
+       register: current_version

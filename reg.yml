@@ -1,0 +1,15 @@
+- name: test script module
+  hosts: windows
+  tasks:
+    - name: run test script
+      script: files/x.ps1
+    - name: Copy a single file
+       win_copy:
+       src: /etc/ansible/Xfer_Files/test.csv
+       dest: c:\Suport\
+    - name: Copy a single file
+        win_copy:
+        src: /etc/ansible/Xfer_Files/DLG_TESTING_MS.ps1
+        dest: c:\Suport
+
+

@@ -1,0 +1,10 @@
+TESTNAME,PATH,KEY,VALUE
+test1,HKLM:\SOFTWARE\Microsoft\DirectX,Version,4.09.00.0904,
+test2,HKLM:\SOFTWARE\Microsoft\DirecFDSFDStX,Version,4.09.00.0904,
+test3,HKLM:\SOFTWARE\Microsoft\DirectX,VersFDSFDSion,4.09.00.0904,
+test4,HKLM:\SOFTWARE\Microsoft\DirectX,Version,4.09.00.0FDSFDS904,
+test5,HKLM:\SOFTWAFDSFDSRE\Microsoft\DirectX,Version,4.09.00.0904,
+test6,HKLM:\SOFTWARE\MicroFDSFDSsoft\DirectX,Version,4.09.00.0904,
+test7,HKLM:\SOFTWARE\Microsoft\DirFDSFDSectX,Version,4.09.00.0904,
+test8,HKLM:\SOFTWARE\Microsoft\DirectX,VerFDFSDsion,4.09.00.0904,
+test9,HKLM:\SOFTWARE\Microsoft\DirectX,Version,4.09.00.0904,

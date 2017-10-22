@@ -1,0 +1,6 @@
+--- 
+- name: Powershel Folder creation 
+  hosts: all 
+  tasks: 
+    - name: Create a folder 
+      raw: import-csv c:\suport\test.csv | test-RegistryKeyValue | out-file c:\suport\results.txt	

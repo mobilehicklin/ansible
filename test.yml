@@ -1,0 +1,5 @@
+- name: test script module
+  hosts: windows
+  tasks:
+    - name: run test script
+      win_command: Powershell.exe "/etc/ansible/files/lol.ps1 >> info.txt

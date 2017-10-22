@@ -1,0 +1,6 @@
+--- 
+- name: Enable Remote Desktop on 
+  hosts: all 
+  tasks: 
+    - name: Enable Remote Desktop 
+      raw: test-registrykeyvalue -TESTNAME 'test1' -PATH 'ewqewewq;' -KEY 'dsdasdas' -VALUE 'ddsdasdas'
