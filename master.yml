@@ -6,25 +6,25 @@
     - name: Copy all files required for server testing
       win_copy:
        src: /etc/ansible/Xfer_Files/
-       dest: c:\Suport\
+       dest: c:\Support\
     - name: execute powershell script to collects server infomation
       script: files/x.ps1
     - name: Remove windows Registry input file for testing
       win_file:
-       path: C:\Suport\test.csv
+       path: C:\Support\input.csv
        state: absent
     - name: Remove Powershell Registry Function script
       win_file:
-       path: C:\Suport\DLG_TESTING_MS.ps1
+       path: C:\Support\DLG_Reg_Testss.ps1
        state: absent
     - name: Copy the test results
       win_copy:
-       src: c:\Suport\result.txt
-       dest: c:\testing\result.txt
+       src: c:\Support\result.html
+       dest: c:\testing\results.html
        remote_src: True
     - name: remove test results from suport location
       win_file:
-       path: c:\suport\result.txt
+       path: c:\support\result.html
        state: absent
     - name: Testing registry keys demo
       win_reg_stat:
