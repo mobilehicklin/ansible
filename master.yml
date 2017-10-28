@@ -15,16 +15,16 @@
        state: absent
     - name: Remove Powershell Registry Function script
       win_file:
-       path: C:\Support\DLG_Reg_Testss.ps1
+       path: C:\Support\DLG_Reg_Test.ps1
        state: absent
     - name: Copy the test results
       win_copy:
-       src: c:\Support\result.html
-       dest: c:\testing\results.html
+       src: c:\Support\output.html
+       dest: c:\testing\output.html
        remote_src: True
     - name: remove test results from suport location
       win_file:
-       path: c:\support\result.html
+       path: c:\support\output.html
        state: absent
     - name: Testing registry keys demo
       win_reg_stat:
